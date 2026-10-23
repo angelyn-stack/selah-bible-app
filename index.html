@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F7F8F3" />
+  <meta name="description" content="Selah is a quiet, thoughtful place to read and explore the Bible. Browse books and chapters, find passages, and save favorite verses." />
+  <title>Selah — A quiet place for Scripture</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-library" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7c-2-2-5-3-9-3v15c4 0 7 1 9 3 2-2 5-3 9-3V4c-4 0-7 1-9 3Z"/><path d="M12 7v15"/></symbol>
+    <symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-10-2v15c4 0 7 0 10 2 3-2 6-2 10-2V4c-4 0-7 0-10 2Zm0 0v15"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m14 5-7 7 7 7M7 12h14"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="m10 5 7 7-7 7M17 12H3"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4V4.5Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 16V3m0 0-5 5m5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M2 12h2m16 0h2M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A8 8 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10Z"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="currentColor" stroke="none"/><circle cx="16" cy="17" r="2" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4m0 4h.01"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 5.5c-2-2.5-5.8-2.5-8 0-2.2-2.5-6-2.5-8 0-2.5 3.3-.5 6.5 2 9l6 5.5 6-5.5c2.5-2.5 4.5-5.7 2-9Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M21 3c-11 0-17 4-17 12 0 3.5 2.3 6 5.5 6C17 21 21 13 21 3Z"/><path d="M4 21c3-6 7-10 13-14"/></symbol>
+  </svg>
+  <a class="skip-link" href="#mainContent">Skip to Bible reading</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="icon-btn mobile-only sidebar-toggle" id="openSidebar" type="button" aria-label="Open Bible books" aria-controls="bookSidebar" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+      <a class="brand" href="." aria-label="Selah home"><span class="brand-symbol"><svg class="icon"><use href="#i-leaf"/></svg></span><span>selah<span class="brand-period">.</span></span></a>
+      <div class="topbar-separator"></div>
+      <span class="brand-caption">A quiet place for Scripture</span>
+      <form class="reference-form" id="referenceForm" role="search">
+        <svg class="icon ref-icon"><use href="#i-search"/></svg>
+        <input type="search" id="referenceInput" name="reference" placeholder="Search a passage, e.g. John 3:16" aria-label="Search Bible passage by reference" autocomplete="off" />
+        <button type="submit" id="referenceSubmit" class="reference-submit">Find <span class="hide-compact">passage</span> <svg class="icon"><use href="#i-arrow-right"/></svg></button>
+      </form>
+      <button type="button" class="icon-btn theme-toggle" id="themeToggle" aria-label="Switch to evening reading theme" title="Toggle reading theme"><svg class="icon"><use href="#i-moon"/></svg></button>
+    </div>
+  </header>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+  <div class="app-layout">
+    <aside class="book-sidebar" id="bookSidebar" aria-label="Bible book navigation">
+      <div class="sidebar-heading"><div><span class="eyebrow">YOUR LIBRARY</span><h2>The Bible</h2></div><button class="icon-btn mobile-only" id="closeSidebar" aria-label="Close Bible books"><svg class="icon"><use href="#i-x"/></svg></button></div>
+      <div class="sidebar-search"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="bookFilter" placeholder="Find a book..." aria-label="Find a Bible book" autocomplete="off" /></div>
+      <div class="testament-filter" role="group" aria-label="Filter by testament"><button type="button" class="active" data-testament="all" aria-pressed="true">All</button><button type="button" data-testament="old" aria-pressed="false">Old</button><button type="button" data-testament="new" aria-pressed="false">New</button></div>
+      <nav class="books-list" id="booksList" aria-label="Books of the Bible"><p class="muted small">Loading the books...</p></nav>
+      <div class="sidebar-foot"><svg class="icon"><use href="#i-book-open"/></svg><span>66 books · One timeless story</span></div>
+    </aside>
+
+    <main id="mainContent" class="main-column">
+      <div class="intro-row">
+        <div><div class="intro-overline"><span class="mini-sun"><svg class="icon"><use href="#i-sun"/></svg></span><span id="todayLabel">A MOMENT TO BE STILL</span></div><h1>Find a little <em>stillness.</em></h1><p>A gentle space to slow down, reflect, and stay rooted in the Word.</p></div>
+        <div class="intro-decoration" aria-hidden="true"><svg viewBox="0 0 144 144"><circle cx="72" cy="72" r="54"/><circle cx="72" cy="72" r="38"/><path d="M72 18v108M18 72h108M34 34l76 76m0-76-76 76"/><circle cx="72" cy="72" r="7"/></svg></div>
+      </div>
+      <div class="tab-row" role="tablist" aria-label="Scripture views"><button type="button" class="view-tab active" id="readTab" role="tab" aria-controls="readPanel" aria-selected="true"><svg class="icon"><use href="#i-book-open"/></svg> Read Scripture</button><button type="button" class="view-tab" id="savedTab" role="tab" aria-controls="savedPanel" aria-selected="false"><svg class="icon"><use href="#i-bookmark"/></svg> Saved verses <span class="tab-count" id="savedTabCount">0</span></button></div>
+
+      <section id="searchResult" class="search-result" hidden aria-label="Bible reference search results">
+        <div class="search-result-head"><div><span class="eyebrow">PASSAGE SEARCH</span><h2 id="searchResultTitle">Search results</h2></div><button class="icon-btn" type="button" id="dismissSearch" aria-label="Dismiss search results"><svg class="icon"><use href="#i-x"/></svg></button></div>
+        <p class="search-result-subtitle" id="searchResultMessage"></p><div id="searchResultVerses" class="search-result-verses"></div><button type="button" class="soft-button" id="searchReadContext" hidden>Read in context <svg class="icon"><use href="#i-arrow-right"/></svg></button>
+      </section>
+
+      <section id="readPanel" role="tabpanel" aria-labelledby="readTab">
+        <div class="selector-panel"><div class="selector-heading"><span class="eyebrow">EXPLORE THE WORD</span><span class="selector-description">Choose where you'd like to begin</span></div>
+          <div class="selector-grid">
+            <label class="select-field"><span>BOOK</span><select id="bookSelect" aria-label="Choose Bible book"><option value="JHN">John</option></select></label>
+            <label class="select-field"><span>CHAPTER</span><select id="chapterSelect" aria-label="Choose chapter"><option value="3">3</option></select></label>
+            <label class="select-field"><span>VERSE</span><select id="verseSelect" aria-label="Jump to verse"><option value="all">All verses</option></select></label>
+            <label class="select-field"><span>TRANSLATION</span><select id="translationSelect" aria-label="Choose Bible translation"><option value="web">WEB · World English Bible</option><option value="kjv">KJV · King James Version</option><option value="asv">ASV · American Standard</option><option value="bbe">BBE · Basic English</option><option value="darby">DARBY · Darby Bible</option></select></label>
+          </div>
+        </div>
+        <article class="reader-card" aria-label="Bible chapter reader">
+          <div class="reader-topline"><div class="reader-location"><span class="reader-location-dot"></span><span id="testamentLabel">NEW TESTAMENT</span><span class="crumb-slash">/</span><span id="bookBreadcrumb">JOHN</span></div><button class="reader-bookmark-counter" id="quickSaved" type="button"><svg class="icon"><use href="#i-bookmark"/></svg><span>My verses</span></button></div>
+          <div class="reader-title-row"><div><p class="chapter-superline">THE BOOK OF</p><h2 id="chapterTitle">John <em>3</em></h2><p class="chapter-description" id="chapterDescription">Take your time. Read at your own pace.</p></div><div class="chapter-arrows"><button class="icon-btn chapter-arrow" id="prevChapterTop" type="button" aria-label="Previous chapter" title="Previous chapter"><svg class="icon"><use href="#i-chevron-left"/></svg></button><button class="icon-btn chapter-arrow" id="nextChapterTop" type="button" aria-label="Next chapter" title="Next chapter"><svg class="icon"><use href="#i-chevron-right"/></svg></button></div></div>
+          <div class="reader-rule"><span></span><svg class="icon"><use href="#i-sparkle"/></svg><span></span></div>
+          <div class="chapter-find"><label for="chapterFind"><svg class="icon"><use href="#i-search"/></svg><span>Find in this chapter</span></label><input id="chapterFind" type="search" placeholder="Type a word or phrase..." autocomplete="off" /><span id="findCount" class="find-count" aria-live="polite"></span></div>
+          <div class="reader-content" id="readerContent" aria-live="polite"><div class="chapter-loading"><div class="spinner"></div><span>Opening the Scriptures...</span></div></div>
+          <div class="reader-bottom"><button class="chapter-nav-btn" id="prevChapterBottom" type="button"><svg class="icon"><use href="#i-arrow-left"/></svg><span>Previous chapter</span></button><span class="chapter-progress" id="chapterProgress">Chapter 3</span><button class="chapter-nav-btn" id="nextChapterBottom" type="button"><span>Next chapter</span><svg class="icon"><use href="#i-arrow-right"/></svg></button></div>
+        </article>
+        <div class="footnote"><svg class="icon"><use href="#i-heart"/></svg><span>One verse at a time. One moment at a time.</span></div>
+      </section>
+
+      <section id="savedPanel" class="saved-panel" role="tabpanel" aria-labelledby="savedTab" hidden><div class="saved-head"><div><span class="eyebrow">YOUR QUIET COLLECTION</span><h2>Verses to keep close.</h2><p>Saved on this device, for the moments you need them.</p></div><svg class="icon"><use href="#i-bookmark"/></svg></div><div id="savedList" class="saved-list"></div></section>
+    </main>
+
+    <aside class="right-rail" aria-label="Reading inspiration and tools">
+      <div class="daily-card"><div class="daily-ornament" aria-hidden="true"><svg viewBox="0 0 100 90" fill="none"><path d="M50 84V11M50 70C24 68 19 52 17 38c18 1 30 11 33 32Zm0-23C76 45 82 29 84 15 65 17 53 30 50 47Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 26C34 24 30 14 28 6c11 1 19 7 22 20Z" stroke="currentColor" stroke-width="1.25"/></svg></div><div class="daily-tag"><svg class="icon"><use href="#i-sparkle"/></svg> A DAILY PAUSE</div><h2>A verse for<br/><em>today.</em></h2><blockquote id="dailyText">Connecting to today’s passage...</blockquote><p id="dailyReference" class="daily-ref">LOADING SCRIPTURE</p><button type="button" class="daily-link" id="dailyOpen">Read this verse <svg class="icon"><use href="#i-arrow-right"/></svg></button></div>
+      <div class="tool-card"><div class="tool-title"><svg class="icon"><use href="#i-sliders"/></svg><h3>Reading preferences</h3></div><div class="tool-option"><div><span class="tool-label">Text size</span><span class="tool-hint">Make reading comfortable</span></div><div class="font-buttons"><button type="button" id="fontDecrease" aria-label="Decrease text size">A<span>−</span></button><button type="button" id="fontIncrease" aria-label="Increase text size">A<span>+</span></button></div></div><div class="tool-option toggle-option"><div><span class="tool-label">Verse numbers</span><span class="tool-hint">Show verse references</span></div><label class="switch"><input id="verseNumbersToggle" type="checkbox" checked/><span class="slider"></span></label></div></div>
+      <div class="tip-card"><div class="tip-icon"><svg class="icon"><use href="#i-heart"/></svg></div><div><h3>A small reminder</h3><p>There is no rush here. Simply read, pause, and return whenever you need.</p></div></div>
+      <div class="api-credit">Scripture provided by <a href="https://bible-api.com/" target="_blank" rel="noopener noreferrer">bible-api.com <svg class="icon"><use href="#i-arrow-right"/></svg></a></div>
+    </aside>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
